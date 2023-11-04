@@ -4,11 +4,15 @@ import Quote from "./LandingPage/Quote"
 import About from "./LandingPage/About"
 
 function App() {
+  const [theme, setTheme] = useState("light")
+
   return (
     <>
-      <Hero />
-      <Quote />
-      <About />
+      <div id={theme}>
+        <Hero theme={theme} setTheme={setTheme} />
+        {/* <Quote /> */}
+        {/* <About /> */}
+      </div>
     </>
   )
 }

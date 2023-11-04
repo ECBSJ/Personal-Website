@@ -1,6 +1,11 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   scroll-snap-type: y mandatory;
+  --gradient: linear-gradient(-90deg, black, white, rgb(103, 103, 103), white, black);
+  --near-white: #fafafa;
+  --near-black: #252525;
+  --title-light: #474747;
+  --title-dark: #9f9f9f;
 }
 
 ::-webkit-scrollbar {
@@ -22,11 +27,77 @@ body {
 }
 
 .container {
+  position: relative;
+  background-color: var(--near-white);
   height: 100svh;
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  transition: background-color 200ms ease-in-out;
+}
+
+#dark .container {
+  background-color: var(--near-black);
+}
+
+h1 {
+  color: var(--title-light);
+  transition: color 200ms 240ms;
+}
+
+#dark h1 {
+  color: var(--title-dark);
+}
+
+.icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.icon:active {
+  transform: scale(0.9);
+}
+
+#dark .icon {
+  color: #9f9f9f;
+}
+
+.moniker {
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  background-position: right;
+  transition: all 500ms;
+}
+
+.moniker:hover {
+  background-position: left;
+}
+
+.moniker-subtitle {
+  position: absolute;
+  right: 0px;
+  bottom: -22px;
+  font-size: 8vw;
+  color: var(--near-black);
+}
+
+#dark .moniker-subtitle {
+  color: var(--near-white);
+}
+
+@media (min-width: 500px) {
+  .moniker-subtitle {
+    bottom: 0;
+    font-size: 2vw;
+  }
 }

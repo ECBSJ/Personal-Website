@@ -3,7 +3,7 @@ import React, { useEffect } from "react"
 function About() {
   return (
     <>
-      <div className="container">about</div>
+      <div className="container"></div>
     </>
   )
 }
