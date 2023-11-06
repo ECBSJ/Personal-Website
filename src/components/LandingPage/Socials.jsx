@@ -5,7 +5,7 @@ function Socials() {
   return (
     <>
       <div className="container">
-        <div className="display-flex" style={{ rowGap: "1vw", fontSize: "2.5vw", flexDirection: "column", alignItems: "center", justifyContent: "center", width: "100%" }}>
+        <div className="display-flex" style={{ rowGap: "1vw", flexDirection: "column", alignItems: "center", justifyContent: "center", width: "100%" }}>
           <a className="display-flex socials" href="https://twitter.com/ECBSJ" target="_blank">
             Twitter
             <MdOpenInNew />{" "}
@@ -22,7 +22,7 @@ function Socials() {
             Blog/Mirror
             <MdOpenInNew />
           </a>
-          <a className="display-flex socials" href="" target="_blank">
+          <a className="display-flex socials" href="https://drive.google.com/file/d/1OZWuuwVklTsaWOb3r7Jxfo9Q63hZcHnp/view?usp=sharing" target="_blank">
             Resume/CV
             <MdOpenInNew />
           </a>
