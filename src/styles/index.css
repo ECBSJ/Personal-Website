@@ -30,7 +30,7 @@ body {
 .container {
   position: relative;
   background-color: var(--near-white);
-  height: 100svh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
