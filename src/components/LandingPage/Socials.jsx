@@ -22,7 +22,7 @@ function Socials() {
             Blog/Mirror
             <MdOpenInNew />
           </a>
-          <a className="display-flex socials" href="https://drive.google.com/file/d/1OZWuuwVklTsaWOb3r7Jxfo9Q63hZcHnp/view?usp=sharing" target="_blank">
+          <a className="display-flex socials" href="https://drive.google.com/file/d/1_0wDdJV4tb4zNvuCSJ7Lvx3dIfhqOo1k/view?usp=sharing" target="_blank">
             Resume/CV
             <MdOpenInNew />
           </a>
