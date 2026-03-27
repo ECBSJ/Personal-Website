@@ -18,8 +18,8 @@ function Socials() {
             LinkedIn
             <MdOpenInNew />
           </a>
-          <a className="display-flex socials" href="https://mirror.xyz/ecbsj.eth" target="_blank">
-            Blog/Mirror
+          <a className="display-flex socials" href="https://paragraph.com/@ecbsj" target="_blank">
+            Blog
             <MdOpenInNew />
           </a>
           {/* <a className="display-flex socials" href="https://drive.google.com/file/d/1_0wDdJV4tb4zNvuCSJ7Lvx3dIfhqOo1k/view?usp=sharing" target="_blank">

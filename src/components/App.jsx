@@ -5,6 +5,7 @@ import About from "./LandingPage/About"
 import FeaturedProjects from "./LandingPage/FeaturedProjects"
 import FeaturedWritings from "./LandingPage/FeaturedWritings"
 import Socials from "./LandingPage/Socials"
+import FeaturedVideos from "./LandingPage/FeaturedVideos"
 
 function App() {
   const [theme, setTheme] = useState("light")
@@ -17,6 +18,7 @@ function App() {
         <About />
         <FeaturedProjects />
         <FeaturedWritings />
+        <FeaturedVideos />
         <Socials />
       </div>
     </>

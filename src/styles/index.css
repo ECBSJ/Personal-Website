@@ -232,6 +232,10 @@ small {
   content: "Featured Writing";
 }
 
+.featured-video::before {
+  content: "Featured Video";
+}
+
 #dark .featured::before {
   background-color: var(--near-black);
   color: var(--near-white);
