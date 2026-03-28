@@ -236,6 +236,10 @@ small {
   content: "Featured Video";
 }
 
+.featured-tweet::before {
+  content: "Featured Tweet";
+}
+
 #dark .featured::before {
   background-color: var(--near-black);
   color: var(--near-white);

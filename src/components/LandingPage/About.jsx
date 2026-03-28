@@ -1,10 +1,8 @@
-import React, { useEffect } from "react"
-
 function About() {
   return (
     <>
       <div className="container">
-        <p className="about">Action-oriented professional seeking to join a team in creating beautifully engineered products that make an impact. My career not only spans among the financial and web3 sectors, but also internationally from West to East, with varying diverse experiences along the way. The past few years have spawned, in myself, a ravenous interest in web3 and web development, which subsequently led to a few personally-built full stack projects, such as a social DAO app and a full-fledged multi-crypto wallet. On top of that, I enjoy writing & podcasting as it helps me contextualize many complicated subjects.</p>
+        <p className="about">DevRel professional passionate about bridging the gap between developers and beautifully engineered products that make a real impact. My experience spans financial systems and web3, with a global perspective shaped by working across both Western and Eastern ecosystems. Over the past few years, I’ve developed a deep, hands-on interest in web3 and software development—building full-stack projects like a social DAO app and a multi-crypto wallet to better understand the developer journey firsthand. I enjoy turning complex technical concepts into clear, engaging content through writing and deep-dive walkthroughs, while also bringing engineers and product stories to the forefront to help communities truly understand the “why” behind the tech.</p>
       </div>
     </>
   )

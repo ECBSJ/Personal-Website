@@ -6,6 +6,7 @@ import FeaturedProjects from "./LandingPage/FeaturedProjects"
 import FeaturedWritings from "./LandingPage/FeaturedWritings"
 import Socials from "./LandingPage/Socials"
 import FeaturedVideos from "./LandingPage/FeaturedVideos"
+import FeaturedTweets from "./LandingPage/FeaturedTweets"
 
 function App() {
   const [theme, setTheme] = useState("light")
@@ -16,9 +17,10 @@ function App() {
         <Hero theme={theme} setTheme={setTheme} />
         <Quote />
         <About />
-        <FeaturedProjects />
         <FeaturedWritings />
         <FeaturedVideos />
+        <FeaturedTweets />
+        <FeaturedProjects />
         <Socials />
       </div>
     </>
