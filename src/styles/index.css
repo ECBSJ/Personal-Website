@@ -11,6 +11,7 @@
 
 ::-webkit-scrollbar {
   width: 0.3vw;
+  height: 0.3vw;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -327,3 +328,374 @@ a:hover {
     font-size: 6vw;
   }
 }
+
+/* ===== Agent IDE Section ===== */
+
+.agent-container {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.agent-header {
+  text-align: center;
+  flex-shrink: 0;
+  margin-bottom: 40px;
+}
+
+.agent-title {
+  font-size: 3.5vw;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.agent-subtitle {
+  color: var(--title-light);
+  margin: 8px 0 0;
+  font-size: 1rem;
+}
+
+#dark .agent-subtitle {
+  color: var(--title-dark);
+}
+
+/* IDE Window */
+.ide {
+  width: 75%;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  overflow: hidden;
+  border: 1px solid #d4d4d4;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+#dark .ide {
+  border-color: #3e3e3e;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Title Bar */
+.ide-titlebar {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  position: relative;
+  background: #e8e8e8;
+  flex-shrink: 0;
+}
+
+#dark .ide-titlebar {
+  background: #323233;
+}
+
+.ide-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.ide-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.ide-titlebar-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: #666;
+}
+
+#dark .ide-titlebar-text {
+  color: #999;
+}
+
+.ide-menu-btn {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  padding: 2px;
+}
+
+#dark .ide-menu-btn {
+  color: #999;
+}
+
+/* IDE Body */
+.ide-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+/* Sidebar */
+.ide-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  background: #f3f3f3;
+  border-right: 1px solid #e0e0e0;
+}
+
+#dark .ide-sidebar {
+  background: #252526;
+  border-right-color: #3e3e3e;
+}
+
+.ide-sidebar-header {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  color: #888;
+}
+
+.ide-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  user-select: none;
+}
+
+.ide-sidebar-item:hover {
+  background: #e8e8e8;
+}
+
+.ide-sidebar-item--active {
+  background: #e0e0e0;
+}
+
+#dark .ide-sidebar-item {
+  color: #ccc;
+}
+
+#dark .ide-sidebar-item:hover {
+  background: #2a2d2e;
+}
+
+#dark .ide-sidebar-item--active {
+  background: #37373d;
+}
+
+/* Sidebar Overlay (mobile) */
+.ide-sidebar-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Main Area */
+.ide-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Tabs */
+.ide-tabs {
+  display: flex;
+  overflow-x: auto;
+  flex-shrink: 0;
+  background: #f3f3f3;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#dark .ide-tabs {
+  background: #252526;
+  border-bottom-color: #3e3e3e;
+}
+
+.ide-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  border-right: 1px solid #e0e0e0;
+  flex-shrink: 0;
+  background: #ececec;
+  color: #666;
+}
+
+#dark .ide-tab {
+  background: #2d2d2d;
+  color: #969696;
+  border-right-color: #3e3e3e;
+}
+
+.ide-tab--active {
+  background: #fff;
+  color: #333;
+}
+
+#dark .ide-tab--active {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.ide-tab-close {
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.ide-tab-close:hover {
+  opacity: 1;
+}
+
+/* Content Area */
+.ide-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  overscroll-behavior: contain;
+  padding: 16px;
+  background: #fff;
+}
+
+#dark .ide-content {
+  background: #1e1e1e;
+}
+
+.ide-content-text {
+  margin: 0;
+  font-family: "Fira Code", "Cascadia Code", "Consolas", monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #333;
+}
+
+#dark .ide-content-text {
+  color: #d4d4d4;
+}
+
+/* Empty State */
+.ide-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.ide-empty-text {
+  color: #999;
+}
+
+/* ===== Agent IDE Responsive ===== */
+@media (max-width: 500px) {
+  .agent-container {
+    padding: 20px 10px;
+  }
+
+  .agent-title {
+    font-size: 8vw;
+  }
+
+  .agent-subtitle {
+    font-size: 3.5vw;
+  }
+
+  .ide {
+    width: 92%;
+  }
+
+  .ide-menu-btn {
+    display: block;
+  }
+
+  .ide-sidebar {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 260px;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .ide-sidebar--open {
+    display: block;
+  }
+
+  .ide-content-text {
+    font-size: 11px;
+  }
+
+  .ide-tab-name {
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* ===== Markdown Syntax Colors (VS Code Light+/Dark+ defaults) ===== */
+.md-header { color: #800000; }
+.md-fence { color: #800000; }
+.md-inline-code { color: #800000; }
+.md-bold { font-weight: 700; }
+.md-yaml-key { color: #0451a5; }
+.md-yaml-val { color: #a31515; }
+.md-punct { color: #808080; }
+.md-hr { color: #000080; }
+.md-blockquote { color: inherit; }
+.md-list-marker { color: inherit; }
+.md-bracket { color: inherit; }
+.md-url { color: #0000ff; }
+.md-link { text-decoration: underline; cursor: pointer; }
+.md-link:hover { color: #4040ff; }
+
+#dark .md-header { color: #569cd6; }
+#dark .md-fence { color: #ce9178; }
+#dark .md-inline-code { color: #ce9178; }
+#dark .md-yaml-key { color: #569cd6; }
+#dark .md-yaml-val { color: #ce9178; }
+#dark .md-blockquote { color: #569cd6; }
+#dark .md-list-marker { color: inherit; }
+#dark .md-bracket { color: inherit; }
+#dark .md-url { color: #3794ff; }
+#dark .md-link:hover { color: #5ab0ff; }
+
+/* ===== Code Block Syntax Colors (VS Code Light+/Dark+) ===== */
+.code-keyword { color: #0000ff; }
+.code-string { color: #a31515; }
+.code-comment { color: #008000; }
+.code-number { color: #098658; }
+.code-punct { color: #333; }
+.code-variable { color: #001080; }
+.code-constant { color: #0000ff; }
+.code-key { color: #0451a5; }
+.code-value { color: #a31515; }
+.code-flag { color: #333; }
+
+#dark .code-keyword { color: #569cd6; }
+#dark .code-string { color: #ce9178; }
+#dark .code-comment { color: #6a9955; }
+#dark .code-number { color: #b5cea8; }
+#dark .code-punct { color: #d4d4d4; }
+#dark .code-variable { color: #9cdcfe; }
+#dark .code-constant { color: #569cd6; }
+#dark .code-key { color: #9cdcfe; }
+#dark .code-value { color: #ce9178; }
+#dark .code-flag { color: #d4d4d4; }

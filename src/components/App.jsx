@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Hero from "./LandingPage/Hero"
 import Quote from "./LandingPage/Quote"
+import Agent from "./LandingPage/Agent"
 import About from "./LandingPage/About"
 import FeaturedProjects from "./LandingPage/FeaturedProjects"
 import FeaturedWritings from "./LandingPage/FeaturedWritings"
@@ -15,8 +16,9 @@ function App() {
     <>
       <div id={theme}>
         <Hero theme={theme} setTheme={setTheme} />
-        <Quote />
-        <About />
+        {/* <Quote /> */}
+        <Agent />
+        {/* <About /> */}
         <FeaturedWritings />
         <FeaturedVideos />
         <FeaturedTweets />
