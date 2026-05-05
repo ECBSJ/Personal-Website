@@ -366,7 +366,7 @@ function Agent() {
       <div className="agent-header">
         <h1 className="agent-title">Deploy. Agent. Eric.</h1>
         <p className="agent-subtitle">
-          A modern DevRel agent built for today's developer communities.
+          A humanized DevRel agent built for today's dynamic developer communities.
         </p>
       </div>
 

@@ -8,6 +8,9 @@ import FeaturedWritings from "./LandingPage/FeaturedWritings"
 import Socials from "./LandingPage/Socials"
 import FeaturedVideos from "./LandingPage/FeaturedVideos"
 import FeaturedTweets from "./LandingPage/FeaturedTweets"
+import FeaturedDocs from "./LandingPage/FeaturedDocs"
+import FeaturedIRL from "./LandingPage/FeaturedIRL"
+import FeaturedDemos from "./LandingPage/FeaturedDemos"
 
 function App() {
   const [theme, setTheme] = useState("light")
@@ -20,8 +23,11 @@ function App() {
         <Agent />
         {/* <About /> */}
         <FeaturedWritings />
-        <FeaturedVideos />
+        <FeaturedDocs />
+        <FeaturedDemos />
+        <FeaturedIRL />
         <FeaturedTweets />
+        {/* <FeaturedVideos /> */}
         <FeaturedProjects />
         <Socials />
       </div>

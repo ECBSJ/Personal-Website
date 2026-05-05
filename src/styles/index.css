@@ -241,6 +241,18 @@ small {
   content: "Featured Tweet";
 }
 
+.featured-docs::before {
+  content: "Featured Docs";
+}
+
+.featured-irl::before {
+  content: "Featured IRL";
+}
+
+.featured-demo::before {
+  content: "Featured Demo";
+}
+
 #dark .featured::before {
   background-color: var(--near-black);
   color: var(--near-white);

@@ -1,4 +1,3 @@
-import React, { useEffect } from "react"
 import { MdOpenInNew } from "react-icons/md"
 import { LuConstruction } from "react-icons/lu"
 import artsnlLogo from "../../assets/artsnl-logo-gray.svg"
@@ -68,10 +67,10 @@ function FeaturedProjects() {
           <div className="display-flex featured__content">
             <h2 className="display-flex featured__content-title">
               <LuConstruction className="featured__content-title-icon" style={{ color: "#929292" }} />
-              Under Construction
+              Peel
             </h2>
-            <small>Unknown | Unknown | Unknown | Unknown | Unknown</small>
-            <p className="featured__content-body">My next project is currently under stealth development mode. More details to come later.</p>
+            <small>A Payments Engine for Every Layer (under development)</small>
+            <p className="featured__content-body">Peel is a unified Bitcoin routing SDK that abstracts away the complexity of Bitcoin’s Layer 1 and Layer 2 ecosystem. Peel enables developers to send sats without needing to understand the underlying network, asset type, or routing logic.</p>
           </div>
           <div className="display-flex" style={{ rowGap: "0.4vw", fontSize: "2vw", paddingRight: "30px", flexDirection: "column", alignItems: "flex-end", justifyContent: "center", flex: 1, width: "100%", height: "100%" }}></div>
         </div>
