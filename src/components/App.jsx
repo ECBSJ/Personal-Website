@@ -20,7 +20,7 @@ function App() {
       <div id={theme}>
         <Hero theme={theme} setTheme={setTheme} />
         {/* <Quote /> */}
-        <Agent />
+        {/* <Agent /> */}
         {/* <About /> */}
         <FeaturedWritings />
         <FeaturedDocs />

@@ -72,7 +72,12 @@ function FeaturedProjects() {
             <small>A Payments Engine for Every Layer (under development)</small>
             <p className="featured__content-body">Peel is a unified Bitcoin routing SDK that abstracts away the complexity of Bitcoin’s Layer 1 and Layer 2 ecosystem. Peel enables developers to send sats without needing to understand the underlying network, asset type, or routing logic.</p>
           </div>
-          <div className="display-flex" style={{ rowGap: "0.4vw", fontSize: "2vw", paddingRight: "30px", flexDirection: "column", alignItems: "flex-end", justifyContent: "center", flex: 1, width: "100%", height: "100%" }}></div>
+          <div className="display-flex" style={{ rowGap: "0.4vw", fontSize: "2vw", paddingRight: "30px", flexDirection: "column", alignItems: "flex-end", justifyContent: "center", flex: 1, width: "100%", height: "100%" }}>
+            <a className="display-flex featured__link hide-on-mobile" href="https://github.com/ECBSJ/Peel" target="_blank">
+              Source Code
+              <MdOpenInNew className="featured__content-projects-title-icon" />
+            </a>
+          </div>
         </div>
       </div>
     </>
